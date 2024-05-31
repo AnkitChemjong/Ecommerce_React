@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.abou-main{
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    border-radius: 10px;
+}
+
+.about-main{
+    width:100%;
+    height:600px;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(blom.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.amain1{
+    width:400px;
+    height:400px;
+    background-image:url(logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow:hidden;
+    border-radius: 100px;
+    position:relative;
+    right:90px;
+}
+.amain2{
+  width:450px;
+  height:500px;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.amain2>div{
+    position:relative;
+    display:flex;
+    justify-content: center;
+  align-items: center;
+
+}
+.amain2>div>h1{
+    position: relative;
+    right:70px;
+    color:rgb(169, 176, 174);
+}
+.amain2p{
+    width:500px;
+    height:200px;
+    position:relative;
+    left:140px;
+}
+.amain2p>p{
+    position: relative;
+    bottom:10px;
+    color:rgb(246, 250, 249);
+    font-family: monospace;
+    font-size: 1rem;
+    right:20px;
+}
+.det-div{
+    width:800px;
+    position:relative;
+     right:20px;
+     
+}
+.deta-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.deta-div>div{
+    margin-right:30px;
+}
+.deta-div>div>p{
+    position:relative;
+    color:azure;
+}
+.deta-div>div>div{
+    display:flex;
+}
+.deta-div>div>div>h2{
+    color:rgb(169, 176, 174);
+}
+.deta-div>div>div>i{
+    top:5px;
+    font-size: 15px;
+    position: relative;
+    margin-left:5px;
+}
+.emp-div{
+    width:100%;
+    height:750px;
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.emp-div>div{
+    
+    position:relative;
+    top:50px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius:20px;
+    background-color:rgb(113, 95, 95);
+
+}
+.p-left{
+    width:600px;
+    height:550px;
+    border-radius:20px 0 0 20px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-div{
+    position:relative;
+    top:-120px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-div>h1{
+    margin-bottom: 5px;
+    color:rgb(169, 176, 174);
+
+}
+.top-div>p{
+ color:azure;
+ position: relative;
+ left:25px;
+ margin-bottom:10px;
+}
+
+.detail{
+    position:relative;
+    bottom:50px;
+}
+.detail>h1{
+    color:rgb(169, 176, 174);
+    position:relative;
+    left:100px;
+    bottom:30px;
+ 
+}
+
+.detail>div{
+    display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.detail>div>div>div{
+    margin-bottom: 20px;
+}
+.detail1>div{
+    display:flex;
+}
+.detail1>div>h2{
+    color:azure;
+  font-size: 20px;
+  font-family:monospace;
+  margin-right:5px;
+}
+.detail1>div>i{
+    font-size: 15px;
+    position:relative;
+    top:3px;
+}
+.detail1>p{
+    color:azure;
+}
+
+.p-right{
+    width:500px;
+    height:520px;
+    position:relative;
+    right:60px;
+    background-color: rgb(195, 202, 202);
+    border-radius:20px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+.staff{
+    width:1200px;
+    height:600px;
+    background-color: rgb(90, 94, 93);
+    border-radius: 20px;
+    margin:auto;
+    margin-bottom:30px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.staff-left{
+    width:700px;
+    height:400px;
+    background-image:url(staff.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow:0 25px 45px rgba(178, 181, 178, 0.3);
+}
+.staff-right{
+    width:400px;
+    height:400px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+
+}

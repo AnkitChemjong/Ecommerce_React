@@ -1,0 +1,594 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+header{
+  width:100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  position: relative;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ border-radius: 10px;
+ margin-bottom:20px;
+}
+#chk1{
+  display: none;
+}
+i{
+  color: #fff;
+  cursor: pointer;
+}
+.logo{
+  position:relative;
+  right:220px;
+}
+header .logo img{
+ width:150px;
+ height:150px;
+ border-radius: 90px;
+}
+.search-box{
+  width:100%;
+  height:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom:60px;
+  top:1px;
+  margin-top:10px;
+  
+
+}
+.search-box>form{
+  position:absolute;
+  top:10px;
+}
+.search-box form input{
+  width:400px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background:#726f6f;
+  border-radius: 30px;
+  color:rgb(255, 255, 255);
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 10px;
+  text-align: center;
+}
+.search-box form input::placeholder{
+  color:azure;
+}
+/*Button change color due to the hover effect in log_sign.css*/
+.search-box form button{
+  cursor: pointer;
+  width:40px;
+  height: 40px;
+  border-radius: 30px;
+  border:none;
+  position: relative;
+  top:0;
+  transform: scale(0.9);
+  background: green;
+  left:1px;
+}
+header .f-ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  right:190px;
+  bottom: 70px;;
+
+}
+header .f-ul li{
+  list-style: none;
+  margin:15px;
+}
+header .f-ul li a{
+  text-decoration: none;
+  color:#fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-family: monospace;
+}
+header .f-ul li a:hover{
+  background: #746a6a;
+  border-radius: 10px;
+}
+
+header .menu{
+  font-size: 2em;
+  display: none;
+}
+/* Define styles for the dropdown menu */
+.dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Initially hide the dropdown */
+  background-color: #fff; /* Background color of the dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add shadow effect */
+  position: absolute; /* Position the dropdown absolutely */
+  z-index: 1; /* Ensure the dropdown appears above other elements */
+ 
+}
+
+.dropdown li {
+  padding: 10px; /* Add padding for better spacing */
+  cursor: pointer;
+}
+
+/* Show the dropdown when its parent is hovered or clicked */
+.f-ul > li:hover > .dropdown,
+.f-ul > li:focus-within > .dropdown {
+  display: block;
+}
+
+/* Position the dropdown relative to its parent */
+.dropdown {
+  position: relative;
+  top: 100%;
+  left:0;
+  min-width: 80px; /* Adjust width as needed */
+}
+
+/* Hide the dropdown input */
+.f-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.f-ul > li {
+  position: relative;
+  display: inline-block;
+}
+
+.f-ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:rgb(57, 54, 54);
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+}
+
+.f-ul > li:hover > ul {
+  display: block;
+}
+.si-div{
+  display: flex;
+position: relative;
+left: 220px;
+bottom: 70px;
+
+}
+.si-div>.ic-div{
+  margin: 20px;
+}
+
+.si-div>.ic-div>span>a>i{
+  font-size: 20px;
+ }
+ .si-div>.ic-div>span>a{
+ color:#ddd;
+ position:relative;
+ font-size: small;
+
+ }
+ .si-div>.ic-div>span{
+  display: block;
+  background-color: #746a6a;
+  border-radius: 50%;
+  height:55px;
+  width:55px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+ }
+ .si-div>.ic-div>span>a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+ .si-div>.ic-div>div{
+  position:relative;
+  top:0;
+  right:2px;
+  width:60px;
+  height: 20px;
+  color: white;
+  background-color:#746a6a;
+  border-radius:20px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition:all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+
+}
+.si-div>.ic-div>div:before{
+ position: absolute;
+ content: "";
+ height: 10px;
+ width: 10px;
+ background:#746a6a;
+ top:-5px;
+ left:50%;
+ transform: translateX(-50%) rotate(45deg);
+
+}
+ .si-div>.ic-div:hover>div{
+  top: 10px;
+  opacity: 1;
+  pointer-events: auto;
+ }
+ .txt-div{
+  position: absolute;
+ 
+  top:250px;
+  left:200px;
+ 
+  
+ }
+ .txt-div>h1{
+color:azure;
+text-transform: uppercase;
+margin:10px;
+
+ }
+ .txt-div>p
+ {
+  margin:10px;
+    color:azure;
+    font-family: monospace;
+ }
+ .combo {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: auto;
+    overflow: hidden;
+    background: linear-gradient( rgb(0,0,0,0.5) , rgb(0,0,0,0.5) );
+}
+
+.combo1 {
+    width: 500%;
+    height: 500px;
+    display: flex;
+    transition: 2s;
+    
+}
+
+.combo1 input {
+    display: none;
+}
+
+.sld1 {
+    width: 100%;
+    transition: 1s;
+}
+
+
+.sld1 img {
+    width: 900px;
+    height: 500px;
+    
+}
+
+/* for navigation */
+.navig{
+    position:absolute;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:45%;
+}
+
+.mnbtn {
+    border: 2px solid skyblue;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    position: relative;
+    bottom:10px;
+}
+
+.mnbtn:not(:last-child) {
+    margin-right: 17px;
+}
+
+.mnbtn:hover {
+    background: skyblue;
+}
+
+#rd1:checked ~ .sld1 {
+    margin-left: 0;
+}
+
+#rd2:checked ~ .sld1 {
+    margin-left: -20%;
+}
+
+#rd3:checked ~ .sld1 {
+    margin-left: -40%;
+}
+
+#rd4:checked ~ .sld1 {
+    margin-left: -60%;
+}
+
+#rd5:checked ~ .sld1 {
+    margin-left: -80%;
+}
+/*component*/
+.component{
+  max-width:1300px;
+  height:900px;
+  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  margin:auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.component>h1{
+  font-size:3rem;
+  color:#b6b2b2;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.component>div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.component>div>div{
+background-color: rgb(88, 157, 157);
+overflow:hidden;
+margin:10px;
+height:300px;
+padding:1rem 1rem;
+text-align: center;
+border-radius: 10px;
+box-shadow:o.5rem 1rem rgba(255,255,255,.1);
+cursor:pointer;
+}
+.hid-div{
+  display:grid;
+  justify-content: content;
+  align-items: center;
+  margin:10px;
+  position:relative;
+  right:10px;
+  width:100%;
+  top:10px;
+  background-color:rgb(124, 138, 138) ;
+  border-radius: 10px;
+  opacity:0;
+  transition:all 1s cubic-bezier(0.68,-0.55,0.265,1.55);
+  pointer-events: none;
+}
+
+.component>div>div:hover{
+  transform:scale(1.1);
+ 
+}
+.component>div>div:hover>.hid-div{
+  pointer-events: auto;
+  top:-80px;
+  opacity:1;
+}
+
+.stars-h{
+  margin:3px;
+}
+.stars-h>i{
+  font-size: 20px;
+  color:white;
+  margin:2px;
+
+}
+.component>div>div:hover>img{
+  border:2px solid black;
+}
+.component>div>div>img{
+  height:200px;
+  width:260px;
+  border:1px solid black;
+  border-radius: 10px;
+}
+.hid-div>div{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.hid-div>div>button{
+  position:relative;
+  margin:10px;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  border:2px solid rgb(3, 3, 3);
+  color:azure;
+  padding:5px 5px;
+  border-radius:10px;
+}
+.hid-div>div>input{
+  position:relative;
+  border-radius:20px;
+  height:25px;
+  width:50px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+  header{
+    width:100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    position: fixed;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+   border-radius: 10px;
+  }
+  .search-box form button{
+      position: absolute;
+      cursor: pointer;
+      width:30px;
+      height: 30px;
+      border-radius: 30px;
+      border:none;
+      position: relative;
+      top:0;
+      transform: scale(0.9);
+      background: green;
+      color: #fff;
+  }
+  header .logo img{
+    width:40px;
+    height:40px;
+    border-radius: 90px;
+    position: relative;
+    left:10px;
+    top:10px;
+    }
+    .search-box{
+      flex:1;
+      position: relative;
+      left: 10px;
+    }
+  .search-box form input{
+    margin-top:5px;
+    width:100px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background:#242222;
+    border-radius: 30px;
+    color:gray;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  header .f-ul{
+      position: fixed;
+      top:60px;
+      right: -100%;
+      background: rgba(0,0,0,0.5);
+      height: calc(100vh - 60px);
+      width:50%;
+      flex-direction: column;
+      align-items: center;
+      transition: right 0.5s linear;
+  }
+   
+  header .menu{
+      display: block;
+      width:100px;
+      text-align: center;
+      position: relative;
+      left:10px;
+  }
+  #chk1:checked ~ .f-ul{
+      width:80px;
+      height:120px;
+    right:50px;
+    top:5px;
+    font-size: 3px;
+    border:1px solid rgb(199, 181, 181);
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .si-div{
+    display: flex;
+  position: relative;
+  left: 40px;
+  bottom:5px;
+  }
+  .si-div>.ic-div{
+    margin: -10px;
+  }
+  .si-div>.ic-div>span>a>i{
+    font-size: 15px;
+   }
+   .si-div>.ic-div>span{
+    display: block;
+    background-color: #746a6a;
+    border-radius: 50%;
+    height:30px;
+    width:30px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+   }
+   .si-div>.ic-div>span>a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+   .si-div>.ic-div>div{
+    position:relative;
+    top:0;
+    right:15px;
+    width:60px;
+    height: 20px;
+    color: white;
+    background-color:#746a6a;
+    border-radius:20px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+  
+   }
+   .si-div>.ic-div:hover>div{
+    top: 10px;
+    opacity: 1;
+    pointer-events: auto;
+   }
+   .si-div>.ic-div>div:before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background:#746a6a;
+    top:-5px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+   
+   }
+}
+
