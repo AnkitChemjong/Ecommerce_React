@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {Link,useNavigate} from 'react-router-dom';
 import signinValidation from './validation/signinValidation.jsx';
 import './Log_Sign.css';
+import axios from 'axios';
 
 export default function Sign() {
  const navigate=useNavigate();
@@ -83,7 +84,7 @@ const handleChange=(e)=>{
         }
        }).then((response) => {
         console.log(response.data);
-        alert(response.data)
+        alert(response.data.message)
         navigate('/');
       }
         ).catch((error)=>{

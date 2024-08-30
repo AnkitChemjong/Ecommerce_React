@@ -22,19 +22,19 @@ router.post('/signin', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  const sql = 'select * signin where email=(?)';
+  const sql = 'select * from signin where email=(?)';
   const password=[req.body.password];
   const email=[req.body.email];
 
   db.query(sql,email, (error, results) => {
     if (error) {
       console.error("Error finding user:", error);
-      res.status(500).json({ error: 'An error occurred while finding user with email' });
+      res.status(500).json({ success:false,error: 'An error occurred while finding user with email' });
     } else {
      const sql1="select * from signin where password=(?)";
      db.query(sql1,password,(error,result)=>{
       if(error){
-        res.json({message:"wrong password"});
+        res.json({success:false,message:"wrong password"});
         console.log(error);
       }
       res.send(result);

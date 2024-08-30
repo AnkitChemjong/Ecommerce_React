@@ -37,7 +37,7 @@ const handleOnChange=(e) => {
 
 const pass=async (event)=>{
    event.preventDefault();
-   setError(loginValidation(emlgn,password1));
+   setError(loginValidation(value.email,value.password));
    await axios.post('http://localhost:8000/login',value,{
     headers:{
       'Content-Type':'application/json'
